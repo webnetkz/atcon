@@ -3,6 +3,8 @@
     require_once 'application/database.php';
     $pdo = new DataBase();
 
+    $result = $pdo->pdo->query("SELECT * FROM archive ORDER BY id DESC LIMIT 1;");
+    $result = $result->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +37,7 @@
         </div>
 
         <main>
-           
+           <?php echo $result[0]['content'];?>
         </main>
 
         <footer>
