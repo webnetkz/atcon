@@ -14,4 +14,9 @@
         width: 22%;
         font-weight: 700;
     }
+
+    a.download {
+        width: 70%;
+        text-align: center;
+    }
 }
